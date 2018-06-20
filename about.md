@@ -17,3 +17,6 @@ Passionate about deep learning after a class with IVADO in Montreal where a few 
 ### Contact me
 
 [arnaudrousselqc@gmail.com](mailto:arnaudrousselqc@gmail.com)
+
+### Aknowledgments
+The Kaggle logo icon has been found here https://github.com/tuomastik/icons/tree/master/kaggle_logo
