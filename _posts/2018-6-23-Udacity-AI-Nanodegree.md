@@ -32,7 +32,7 @@ This is what this course mostly addresses and why I became interested. Let's vie
 * **Search, Optimization and planning**
 	* This part of the course focuses on tree searches algorithms (Breadth first, depth first, A*) and symbolic logic to build agents that
 	try to achieve a defined goal state in the most efficient ways possible. The search algorithms are tried on a Pacman game: make an agent able to 
-	eat all the dots with an effective path.  
+	eat all the dots with an effective path. You can find the code for this agent here: [https://github.com/arroqc/Pacman_agent](https://github.com/arroqc/Pacman_agent).
 	![_config.yml]({{ site.baseurl }}/images/pacman_gif.gif)  
 	*Pacman AI*
 	Then later on the course you tackle problem closer to reality. How to plan a network of planes and cargos
