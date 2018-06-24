@@ -2,7 +2,6 @@
 layout: post
 title: Udacity AI Nanodegree
 ---
-##Udacity AI Nanodegree
 
 I like going over a complete course as it helps cement content in the brain. That's also one of the strongest benefit of mentoring and teaching. It forces you to review material and education is a lot about  
 repetition. In this first review I will look at the following online course I've done recently :  
@@ -27,7 +26,7 @@ This is what this course mostly addresses and why I became interested. Let's vie
 	to build an agent that can solve a Sudoku problem. Simply put, when you have constraints like a Sudoku game, you can use these constraints to 
 	reduce the search domain. This speeds up search tremendously. This intro part creates some pretty impressive Sudoku solvers and if you think you are good 
 	at Sudoku try to solve this ? The very simple algorithm built solves it in a second.
-	![_config.yml]({{ site.baseurl }}/images/sudoku_hard.jpg)
+	![_config.yml]({{ site.baseurl }}/images/sudoku_hard.jpg)  
 	*Hardest Sudoku, [source](https://www.telegraph.co.uk/news/science/science-news/9359579/Worlds-hardest-sudoku-can-you-crack-it.html)*
 	* **Project** : Build a Sudoku solver
 * **Search, Optimization and planning**
@@ -43,8 +42,8 @@ This is what this course mostly addresses and why I became interested. Let's vie
 	* This time the goal is to beat another player. The course therefore focuses here on games where two players are involved and how an 
 	agent can search for the solution with the most potential for winning. It focuses mostly around the minimax algorithm 
 	(and improvements like iterative deepening). The idea behind minimax is fairly simple. The agent must maximize its winning potential 
-	while taking into account that during adversary turns (when searching for a good move) the adversary will instead pick a move that minimizes our agent chances of winning.
-	![_config.yml]({{ site.baseurl }}/images/isolation.gif)
+	while taking into account that during adversary turns (when searching for a good move) the adversary will instead pick a move that minimizes our agent chances of winning.  
+	![_config.yml]({{ site.baseurl }}/images/isolation.gif)    
 	*The first player to no longer be able to move loses*
 	* **Project** : Build an agent that plays isolation game where both players have a chess piece and try to isolate the other player.
 * **Fundamentals of Probabilistic Graphical models**
@@ -53,7 +52,7 @@ This is what this course mostly addresses and why I became interested. Let's vie
 	deterministic universe however many problems are stochastic. It explores bayesian nets and hidden Markov models. 
 	The subjects here (PGM) can probably be explored even further in [Daphne Koller course on coursera](https://www.coursera.org/learn/probabilistic-graphical-models). On the subject of Natural Language Processing though, I enjoyed the one from the [advanced Machine Learning](https://www.coursera.org/learn/language-processing/) 
 	better as it focuses on deep learning techniques and felt more up to date (and obviously covers more content). 
-	![_config.yml]({{ site.baseurl }}/images/asia.png)
+	![_config.yml]({{ site.baseurl }}/images/asia.png)  
 	*Bayesian Network for diagnosis [Source](https://www.researchgate.net/publication/220254267_Learning_Bayesian_networks_Approaches_and_issues)*
 	* **Project** : Part of speech tagging. In a sentence, build a model that can recognize and put tags on each words.
 	
