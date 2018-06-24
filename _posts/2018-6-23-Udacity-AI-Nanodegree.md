@@ -33,7 +33,7 @@ This is what this course mostly addresses and why I became interested. Let's vie
 	* This part of the course focuses on tree searches algorithms (Breadth first, depth first, A*) and symbolic logic to build agents that
 	try to achieve a defined goal state in the most efficient ways possible. The search algorithms are tried on a Pacman game: make an agent able to 
 	eat all the dots with an effective path.  
-	![_config.yml]({{ site.baseurl }}/images/pacman_gif.gif)
+	![_config.yml]({{ site.baseurl }}/images/pacman_gif.gif)  
 	*Pacman AI*
 	Then later on the course you tackle problem closer to reality. How to plan a network of planes and cargos
 	to achieve a defined goal of cargos being at the right destination in as little plane trips as you can ?
@@ -43,7 +43,7 @@ This is what this course mostly addresses and why I became interested. Let's vie
 	agent can search for the solution with the most potential for winning. It focuses mostly around the minimax algorithm 
 	(and improvements like iterative deepening). The idea behind minimax is fairly simple. The agent must maximize its winning potential 
 	while taking into account that during adversary turns (when searching for a good move) the adversary will instead pick a move that minimizes our agent chances of winning.  
-	![_config.yml]({{ site.baseurl }}/images/isolation.gif)    
+	![_config.yml]({{ site.baseurl }}/images/isolation.gif)  
 	*The first player to no longer be able to move loses*
 	* **Project** : Build an agent that plays isolation game where both players have a chess piece and try to isolate the other player.
 * **Fundamentals of Probabilistic Graphical models**
