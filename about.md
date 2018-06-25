@@ -9,13 +9,12 @@ I currently work at AIMIA where I help building databases and machine learning m
 ### More Information
 
 A few lines about my background:  
-I studied in Statistics at University of Montreal during which I worked with R on a research project around GLMs. During this time I was a teacher assistant as well as a tutor for a lot of students in maths or statistics. I really enjoyed this and still appreciate trying to teach complex subjects to all audiences.  
-After my Master degree I started to work at AIMIA as a data analyst where I got really involved in predictive modeling. I began to code machine learning and data science in Python.
+I studied in Statistics at University of Montreal during which I worked with R on a research project on GLMs. During this time I was a teacher assistant as well as a tutor for a lot of students in maths or statistics. I really enjoyed this and still appreciate trying to teach complex subjects to all audiences.  
+After my Master degree I started to work at AIMIA as a data analyst where I got really involved in predictive modeling. This is where I began to code machine learning and data science in Python.
 
-Passionate about deep learning after encountering it in a class in an IVADO summer school in Montreal. I've been dedicated to try my best to learn state of the art techniques both in deep learning and traditional machine learning since then.
-I currently am focusing in learning about Natural Language Processing.
+Passionate about deep learning after encountering it in a class at an IVADO summer school, I've been dedicated to try my best to learn state of the art techniques both in deep learning and traditional machine learning.
 
-This blog is both an opportunity for me to refine presentation and teaching skills while also have a platform to display my work.
+This blog is both an opportunity for me to refine presentation and teaching skills while also have a platform to display my work and projects.
 
 ### Contact me
 
