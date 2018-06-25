@@ -28,7 +28,7 @@ The data given to us is very rich:
 
 Note that the text is in russian, creating some additional difficulty for analysis. Let's look at an example :
 
-![_config.yml]({{ site.baseurl }}/images/example_avito.png)
+![_config.yml]({{ site.baseurl }}/images/example_avito.PNG)
 *An example in the dataset*
 
 ## Features
@@ -40,7 +40,7 @@ Early models show a big importance of some variables. Most notably price and ima
 found a strong correlation with the target variable, it was deemed necessary to impute missing prices and image_top_1 with a model rather than a simple method like the mean. The way
 it was modelled was to use a recurrent neural network trained on reading the texts and predict the image_top_1 category. Here is the architecture used:
 
-![_config.yml]({{ site.baseurl }}/images/RNN_guess.png)
+![_config.yml]({{ site.baseurl }}/images/RNN_guess.PNG)
 *RNN architecture for image_top_1 imputation*
 
 A similar idea was used for price but simply adding the city as a potential factor for determining price. You can also find the notebooks for this imputation in the imputation subdirectory
@@ -60,7 +60,7 @@ The gain in predictive power out of these features is small but it's a gain none
 for classical machine learning like trees we need to transform the text. A simple TF-IDF method is used for the description. Term Frequency inverse document frequency (TF-IDF) simply
  counts the number of occurences of each word in each texts and divides by the number of time the word appears at least one across texts. Here is an illustration:
  
-![_config.yml]({{ site.baseurl }}/images/tfidf.png)
+![_config.yml]({{ site.baseurl }}/images/tfidf.PNG)
 *TF-IDF illustration*
 
 As you can see it creates a very long vector of numbers for each document. That vector is used as a feature in another model. It may sound like too many features (sometimes in the millions) 
@@ -82,5 +82,5 @@ and the top 3 classes are considered.
 ![_config.yml]({{ site.baseurl }}/images/inception.png)
 *Inception model [Source Google AI blog](https://ai.googleblog.com/2016/03/train-your-own-image-classifier-with.html)*
 
-*Model used in part 2*
+Model used in part 2
 
