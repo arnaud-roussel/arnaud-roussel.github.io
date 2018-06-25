@@ -33,7 +33,7 @@ Note that the text is in russian, creating some additional difficulty for analys
 
 ## Features
 
-For exploratory data analysis I strongly suggest going over my notebook on github. See the markdown version [here](https://github.com/arroqc/Avito-Kaggle/Avito EDA 1.md). It contains most of the important parts. 
+For exploratory data analysis I strongly suggest going over my notebook on github. See the markdown version [here](https://github.com/arroqc/Avito-Kaggle/blob/master/Avito%20EDA%201.md). It contains most of the important parts. 
 
 **Missing Data**  
 Early models show a big importance of some variables. Most notably price and image_top_1. Image top 1 is assumed to be some classification of the image for an advertisement. Since I
