@@ -44,7 +44,7 @@ it was modelled was to use a recurrent neural network trained on reading the tex
 *RNN architecture for image_top_1 imputation*
 
 A similar idea was used for price but simply adding the city as a potential factor for determining price. You can also find the notebooks for this imputation in the imputation subdirectory
-of the [github repo](https://github.com/arroqc/Avito-Kaggle.) As you have noticed, an embedding layer for words is used. The embedding have been trained on the larger dataset that doesn't contain
+of the [github repo](https://github.com/arroqc/Avito-Kaggle) As you have noticed, an embedding layer for words is used. The embedding have been trained on the larger dataset that doesn't contain
 the target variable. It is rich in descriptions so a simply word 2 vec algorithm was made on its corpus of text using gensim library. To know more about word2vec and the different 
 ways of finding word embeddings you can view [this page for example](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/).
 
