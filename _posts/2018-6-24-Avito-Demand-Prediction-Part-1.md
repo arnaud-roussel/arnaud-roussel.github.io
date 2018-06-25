@@ -11,7 +11,7 @@ divided into two parts:
 
 ## The Problem: 
 
-Avito is a russian online advertisement company. For people living in Canada, think kijiji but in russian. People want to sell items or services to others
+Avito is a russian online advertisement company. For people living in Canada, think Kijiji but russian. People want to sell items or services to others
 and will therefore post online a description of the item, a picture and a price. The task is to predict whether or not an advertisement posted will lead
 to a deal or not. It is important to note that Avito has a more complicated system than 1/0 for a deal, making the target variable a continuous number between
 0 and 1 (leading to a regression task) rather than a binary variable. The training data given is 1.5 million ads and we have to predict 500K ads from
@@ -33,7 +33,7 @@ Note that the text is in russian, creating some additional difficulty for analys
 
 ## Features
 
-For exploratory data analysis I strongly suggest going over my notebook on github. See the markdown version [here](https://github.com/arroqc/Avito-Kaggle/Avito EDA 1 .md). It contains most of the important parts. 
+For exploratory data analysis I strongly suggest going over my notebook on github. See the markdown version [here](https://github.com/arroqc/Avito-Kaggle/Avito EDA 1.md). It contains most of the important parts. 
 
 **Missing Data**  
 Early models show a big importance of some variables. Most notably price and image_top_1. Image top 1 is assumed to be some classification of the image for an advertisement. Since I
