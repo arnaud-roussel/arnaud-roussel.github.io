@@ -6,8 +6,8 @@ title: Avito Kaggle competition - Demand Prediction - Part 1
 In this two part blog post I go over my solution for the Avito challenge competition on Kaggle. It was a pretty interesting competition since it 
 forced me to use many techniques across different fields in Machine Learning like Natural Language Processing and Computer vision. The solution is
 divided into two parts:
-* Part 1 focuses on explaining the problem and some of the feature engineering used
-* Part 2 looks at the different models tried and also the stacking methodology
+* [Part 1](https://arroqc.github.io/Avito-Demand-Prediction-Part-1/) focuses on explaining the problem and some of the feature engineering used
+* [Part 2](https://arroqc.github.io/Avito-Demand-Prediction-Part-2/) looks at the different models tried and also the stacking methodology
 
 ## The Problem: 
 
@@ -91,5 +91,7 @@ To mitigate the overfitting I decided to add more labels to reduce variability a
 too imprecise to really mean something but helping the model to only learn the train set. Using 9 labels in a bag of word fashion negated the issue
 and helped the model a bit.
 
-*To be continued in part 2*
+All image processes are available in the Image subdirectory of the [repository](https://github.com/arroqc/Avito-Kaggle).
+
+*Go to [part 2](https://arroqc.github.io/Avito-Demand-Prediction-Part-2/)*
 
