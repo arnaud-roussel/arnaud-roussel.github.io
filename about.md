@@ -14,7 +14,7 @@ After my Master degree I started to work at AIMIA as a data analyst where I got 
 
 Passionate about deep learning after encountering it in a class at an IVADO summer school, I've been dedicated to try my best to learn state of the art techniques both in deep learning and traditional machine learning.
 
-This blog is both an opportunity for me to refine presentation and teaching skills while also have a platform to display my work and projects.
+This blog is both an opportunity for me to really ciment what I learn (writing/teaching is best to do that) while also have a platform to display my work and projects.
 
 ### Contact me
 

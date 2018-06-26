@@ -24,7 +24,7 @@ vector of numbers to the next layer (usually other numerical features). The vect
 a vectorized representation of the categorical values.
  
 ![_config.yml]({{ site.baseurl }}/images/embedding.PNG)  
-*Observation with 'Rome' value*
+*Observation with 'Rome' value through embedding layer*
 
 One of the advantage of that technique is that the network now has representations that can be used elsewhere. For example, we could now after training
 compare the vectors of Rome and Paris and see if they are close or not. This would give us an idea (for the task) what cities react in similar
@@ -34,22 +34,20 @@ Second, when dealing with text data Jeremy Howard and Sebastian Ruder suggest [i
 an average of all states and a maxpool of all state at the end of a recurrent network layer. So instead of doing this :
 
 ![_config.yml]({{ site.baseurl }}/images/RNN1.PNG)  
-*Simple RNN architecture*
 
 he suggests doing this :
 
 ![_config.yml]({{ site.baseurl }}/images/RNN2.PNG)  
-*Fine tuned RNN architecture*
 
 So to sum up:
 * Categoricals go through an embedding layer
 * Texts go first through an embedding and then through a recurrent layer to produce a numerical vector for the whole text
 * Concatenate everything to the numericals
 * Pass everything through fully connected layers  
+
 Here is how the final architecture looks like :
 
-![_config.yml]({{ site.baseurl }}/images/finalNN.PNG)
-*Final neural network used*
+![_config.yml]({{ site.baseurl }}/images/finalNN.PNG)  
 
 The performance were good but I had something a bit better with the lightgbm GBDT that we will see next.
 
@@ -78,7 +76,7 @@ outside of reading the papers directly [LINK](https://towardsdatascience.com/cat
 One of the advantage of the gradient boosted tree is that it records what features it uses for splitting. This often mean these features are
 the most important for the prediction. Here is my result for the lightGBM model:
 
-![_config.yml]({{ site.baseurl }}/images/importance.PNG)
+![_config.yml]({{ site.baseurl }}/images/importance.PNG)  
 *Feature Importance*
 
 The lightGBM model performs slightly better than the neural network. However, let's not discard the neural net because we can stack it with other models.
@@ -91,8 +89,7 @@ avoid target leaking as much as possible so what the way its done is that during
 each fold. You end up with a vector as long as the train set created by your first model. Then you repeat the process a few times for different 
 models. With this stacked data created, you then train a meta model.
 
-![_config.yml]({{ site.baseurl }}/images/stacking.JPG)
-*Feature Importance*
+![_config.yml]({{ site.baseurl }}/images/stacking.JPG)  
 
 Stacking is a method that is criticized for not being practical and something only good for competitions. After all you have to use many 
 different models. However I'd be more careful. First, in some situation where the individual models are small, it is not a problem to use
