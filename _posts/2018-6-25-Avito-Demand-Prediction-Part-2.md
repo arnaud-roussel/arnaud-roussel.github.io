@@ -17,8 +17,8 @@ Two kind of models were used in this competition. I will expose briefly the idea
 
 I encountered a lot of interesting insights while doing this competition. First, there is a clever way to deal with categorical variables
 in a neural network. I was used to believe you had to one hot encode it or find some other form of encoding. Well, it turns out there
-is a natural way to encode things... using embedding layers. The idea was developped by Yoshua Bengio and his team for the taxi driver competition.
-You can read the paper [here](https://arxiv.org/pdf/1508.00021.pdf). It works similarly than for word. When the network sees a categorical
+is a natural way to encode things... using embedding layers. You can read the paper [here](https://arxiv.org/pdf/1508.00021.pdf). 
+It works similarly than for word. When the network sees a categorical
 value, for example 'Rome' in the category 'City', it looks into a dictionnary of vectors (the embedding layer) and then sends forward this 
 vector of numbers to the next layer (usually other numerical features). The vectors starts with random values and then are trained. This creates
 a vectorized representation of the categorical values.
@@ -110,5 +110,5 @@ Models files:
 
 ## Result
 
-This workflow gave me a nice bronze medal rank for this competition (top 10%). The best single model was lightGBM at 0.2197 and stacking improved
-the score to 0.2192 (lowest is best).
+The best single model was lightGBM at 0.2197 and stacking improved
+the score to 0.2189 (lowest is best).
