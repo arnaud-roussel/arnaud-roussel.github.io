@@ -110,5 +110,4 @@ Models files:
 
 ## Result
 
-The best single model was lightGBM at 0.2197 and stacking improved
-the score to 0.2189 (lowest is best).
+The best single model was lightGBM at 0.2197 and stacking improved the score to 0.2189 (lowest is best).

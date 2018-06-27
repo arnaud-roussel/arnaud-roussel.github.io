@@ -11,6 +11,8 @@ divided into two parts:
 
 ## The Problem: 
 
+[Link to Kaggle page](https://www.kaggle.com/c/avito-demand-prediction)
+
 Avito is a russian online advertisement company. For people living in Canada, think Kijiji but russian. People want to sell items or services to others
 and will therefore post online a description of the item, a picture and a price. The task is to predict whether or not an advertisement posted will lead
 to a deal or not. It is important to note that Avito has a more complicated system than 1/0 for a deal, making the target variable a continuous number between
