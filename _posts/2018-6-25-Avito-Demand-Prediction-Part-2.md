@@ -35,7 +35,7 @@ an average of all states and a maxpool of all state at the end of a recurrent ne
 
 ![_config.yml]({{ site.baseurl }}/images/RNN1.PNG)  
 
-he suggests doing this :
+they suggest doing this :
 
 ![_config.yml]({{ site.baseurl }}/images/RNN2.PNG)  
 
@@ -102,13 +102,11 @@ The final stack used here is fairly simple:
 * 1 Catboost
 * 1 Neural network
 
-The meta model is a small lightGBM. The code for stacking is available on the repository. However, the important part (KFold scheme) is 
-in the individual files:
+Models files:
 * [lightGBM script](https://github.com/arroqc/Avito-Kaggle/blob/master/Avito%20LGBv3.ipynb)
 * [catboost script](https://github.com/arroqc/Avito-Kaggle/blob/master/Catboostv2.ipynb)
 * [Neural Network script](https://github.com/arroqc/Avito-Kaggle/blob/master/Avito%20NN%20v2.ipynb)
 
-Then with the output csv it is run through the stacking script.
 
 ## Result
 
