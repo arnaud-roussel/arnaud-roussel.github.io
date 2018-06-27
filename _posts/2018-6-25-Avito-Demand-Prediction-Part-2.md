@@ -74,7 +74,8 @@ learn if a categorical feature is important or not. For more details, I suggest 
 outside of reading the papers directly [LINK](https://towardsdatascience.com/catboost-vs-light-gbm-vs-xgboost-5f93620723db).
 
 One of the advantage of the gradient boosted tree is that it records what features it uses for splitting. This often mean these features are
-the most important for the prediction. Here is my result for the lightGBM model:
+the most important for the prediction. But note that if a feature is noise instead of signal it could still end up here as if important simply
+because the model overfits thanks to the noise. Here is my result for the lightGBM model:
 
 ![_config.yml]({{ site.baseurl }}/images/importance.PNG)  
 *Feature Importance*
