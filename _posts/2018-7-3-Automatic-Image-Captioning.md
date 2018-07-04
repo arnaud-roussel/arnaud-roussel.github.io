@@ -6,7 +6,9 @@ title: Automatic Image Captions
 The following post tries to mimic the following idea by google AI [LINK](https://ai.googleblog.com/2014/11/a-picture-is-worth-thousand-coherent.html)
 and also takes a lot of tips from the final project of the Deep Learning course from the Advanced Machine Learning course on Coursera.
 
-The full script for the project is available in a jupyter notebook [here](https://github.com/arroqc/ImageCaptioning/blob/master/Image_captioning.ipynb).
+The full script for the project is available in a jupyter notebook [here](https://github.com/arroqc/ImageCaptioning/blob/master/Image_captioning.ipynb). 
+
+Results at the end of this blog post.
 
 ## Idea
 
@@ -72,6 +74,47 @@ When the caption is used as an input, the caption starts at the START token unti
 the next word (generative model). Therefore, from the START word and the image the algorithm must try to output the first word of the
 caption. With the real first word, the second word etc. As a result the output starts at the first word and ends at the END keyword. The
 model is then trained to minimize the error at each prediction step.
+
+```python
+tf.reset_default_graph()
+tf.set_random_seed(32)
+sess = tf.InteractiveSession()
+
+#Image encodding input
+img_encoding = tf.placeholder('float32',[None,2048]) #Image encoding size is 2048
+#caption input/output (since the model is generative caption are both an input and an output)
+captions = tf.placeholder('int32',[None,None])
+
+image_to_lstm = tf.keras.layers.Dense(300,input_shape=(None,2048),activation='elu')
+
+h0 = image_to_lstm(img_encoding) #Use 300 units LSTM. Therefore initial state is 300 size vector
+c0 = h0 #Memory and hidden initial states at same value
+
+#Caption as input (all but the END token)
+embed_layer = tf.keras.layers.Embedding(len(vocab),150)
+caption_embedding = embed_layer(captions[:,:-1]) #Often the gain between 200 and 300 is small
+
+#Pass the embeddings in a LSTM
+#dynamic rnn builds a RNN layer We initiate the LSTM with the img encodings
+#Note: We will have to use it differently for predict. Here we have all the words as inputs to predict the next word at each step
+lstm_cell = tf.nn.rnn_cell.LSTMCell(300)
+h, _ = tf.nn.dynamic_rnn(lstm_cell,caption_embedding,initial_state=tf.nn.rnn_cell.LSTMStateTuple(c0,h0))
+
+#The output of RNN is [batch, time, rnn_size]
+#The logloss however will be calculated across all words of the caption for the batch so we need to unroll the LSTM output
+h_flat = tf.reshape(h,(-1,300)) 
+y = tf.reshape(captions[:,1:],[-1]) #same for what we need to predict (everything but the START token)
+
+#Predict word logit
+lstm_to_logits =  tf.keras.layers.Dense(len(vocab),input_shape=(None,300))
+word_logits = lstm_to_logits(h_flat)
+
+#Padding mask (no crossentropy there)
+pad_mask = tf.not_equal(y,tf.constant(vocab['PAD']))
+cross_ent = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=y,logits=word_logits) #sparse_softmax puts a softmax directly
+cross_ent_masked = tf.boolean_mask(cross_ent,pad_mask)
+loss = tf.reduce_mean(cross_ent_masked,axis=0)
+```
 
 ## Prediction
 
