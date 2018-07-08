@@ -7,6 +7,8 @@ The following post tries to mimic the following idea by google AI [LINK](https:/
 and also takes a lot of tips from the final project of the Deep Learning course from the Advanced Machine Learning course on Coursera.
 
 The full script for the project is available in a jupyter notebook [here](https://github.com/arroqc/ImageCaptioning/blob/master/Image_captioning.ipynb). 
+You may have trouble opening it in github for some reason. I suggest you download it or use the nbViewer [here](https://nbviewer.jupyter.org/github/arroqc/ImageCaptioning/blob/master/Image_captioning.ipynb).
+
 
 Results at the end of this blog post.
 
@@ -22,10 +24,10 @@ The task is to make a machine learning algorithm that gets as an input the image
 ## Neural Network Architecture
 
 Obviously, for such an experimental task many advanced approaches are possible. The one I try here is pretty simple:
-1. First, use a pretrained ImageNet algorithm to get encodings out of its final layer for an image (transfer learning)
-2. Use that encoding as an initial state for a RNN model (here LSTM) that generates the caption
+1. First, use a pretrained ImageNet algorithm to get encodings out of its final layer for an image.
+2. Use that encoding as an initial state for a RNN model (here LSTM) that generates the caption.
 
-It's a standard encoder-decoder architecture that is used often in seq to seq models. One network encodes an object and the other network
+It's a standard encoder-decoder architecture. One network encodes an object and the other network
 is trained to decode that object.
 
 ![_config.yml]({{ site.baseurl }}/images/caption_architecture.PNG)
